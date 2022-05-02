@@ -1,0 +1,38 @@
+.flickity-button {
+    background: rgba(20, 184, 165, 0.4);
+}
+.carousel-1 .flickity-button,
+.carousel-2 .flickity-button {
+    transition: 0.3s;
+    display: block !important;
+}
+.flickity-button:hover {
+    background: rgb(20, 184, 166);
+}
+
+.flickity-prev-next-button {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+/* icon color */
+.flickity-button-icon {
+    fill: white;
+}
+/* position outside */
+.carousel-1 .flickity-prev-next-button.previous {
+    left: calc(100% - 80px);
+    top: -30px;
+}
+.carousel-1 .flickity-prev-next-button.next {
+    right: 12px;
+    top: -30px;
+}
+
+.carousel-2 .flickity-prev-next-button.previous {
+    left: 20px;
+}
+.carousel-2 .flickity-prev-next-button.next {
+    right: 20px;
+}
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */

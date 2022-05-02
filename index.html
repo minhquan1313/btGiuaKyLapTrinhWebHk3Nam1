@@ -1,0 +1,1911 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>e-Commercial website</title>
+        <!-- CSS -->
+        <link rel="stylesheet" href="./resources/css/themify-icons-font/themify-icons.css" />
+        <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css" />
+
+        <link rel="stylesheet" href="./resources/css/tailwindProd.css" />
+        <!-- <link rel="stylesheet" href="./resources/css/tailwindDev.css" /> -->
+
+        <link rel="stylesheet" href="./resources/css/base.css" />
+        <link rel="stylesheet" href="./resources/css/style.css" />
+    </head>
+    <body class="modal-open">
+        <!-- Modal -->
+        <div id="modal">
+            <div id="pageLoader" class="flex items-center justify-center bg-white h-screen w-full overflow-hidden">
+                <img src="http://wp.alithemes.com/html/nest/demo/assets/imgs/theme/loading.gif" alt="" />
+            </div>
+            <div
+                id="b-deal"
+                class="relative flex-col justify-center items-start lg:w-ct-1 md:w-3/4 w-full h-screen md:h-auto hidden bg-white md:rounded-3xl rounded-none bg-contain bg-no-repeat bg-right-bottom p-11 space-y-6"
+                style="background-image: url('http://wp.alithemes.com/html/nest/demo/assets/imgs/banner/popup-1.png')"
+            >
+                <h1 class="font-bold text-yellow-500 text-sm sm:text-base">Món ngon hôm nay</h1>
+                <h1 class="font-black lg:text-4xl md:text-2xl text-xl">
+                    Trái cây hữu cơ <br />
+                    cho sức khoẻ gia đình
+                </h1>
+                <div class="flex items-end sm:gap-6 gap-3">
+                    <h1 class="text-5xl font-bold text-teal-500">$38</h1>
+                    <h1 class="relative flex justify-center">
+                        <span class="text-xl font-bold text-gray-400 line-through"> $52 </span>
+                        <span class="absolute whitespace-nowrap bottom-6 text-sm text-yellow-500 font-semibold"
+                            >26% Off</span
+                        >
+                    </h1>
+                </div>
+                <h1 class="">Nhanh tay! Kết thúc trong:</h1>
+                <ul class="flex lg:w-80 md:w-64 w-56 md:gap-3 gap-1">
+                    <li
+                        class="flex flex-col items-center justify-center w-1/3 aspect-square rounded-md border-2 border-teal-500 bg-white"
+                    >
+                        <h1 class="text-lg font-semibold text-teal-500">1157</h1>
+                        <h1 class="text-sm">Ngày</h1>
+                    </li>
+                    <li
+                        class="flex flex-col items-center justify-center w-1/3 aspect-square rounded-md border-2 border-teal-500 bg-white"
+                    >
+                        <h1 class="text-lg font-semibold text-teal-500">11</h1>
+                        <h1 class="text-sm">Giờ</h1>
+                    </li>
+                    <li
+                        class="flex flex-col items-center justify-center w-1/3 aspect-square rounded-md border-2 border-teal-500 bg-white"
+                    >
+                        <h1 class="text-lg font-semibold text-teal-500">33</h1>
+                        <h1 class="text-sm">Phút</h1>
+                    </li>
+                    <li
+                        class="flex flex-col items-center justify-center w-1/3 aspect-square rounded-md border-2 border-teal-500 bg-white"
+                    >
+                        <h1 class="text-lg font-semibold text-teal-500">22</h1>
+                        <h1 class="text-sm">Giây</h1>
+                    </li>
+                </ul>
+                <div class="flex gap-3 text-lg">
+                    <div class="relative">
+                        <div class="overflow-hidden whitespace-nowrap text-gray-400">
+                            <i class="ti-star"></i>
+                            <i class="ti-star"></i>
+                            <i class="ti-star"></i>
+                            <i class="ti-star"></i>
+                            <i class="ti-star"></i>
+                        </div>
+                        <div
+                            class="overflow-hidden whitespace-nowrap text-yellow-500 absolute inset-0 max-w-full"
+                            style="width: 50%"
+                        >
+                            <i class="ti-star"></i>
+                            <i class="ti-star"></i>
+                            <i class="ti-star"></i>
+                            <i class="ti-star"></i>
+                            <i class="ti-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-400">(4.0)</p>
+                </div>
+                <button
+                    class="mt-auto group flex gap-3 bg-teal-500 rounded-md text-white font-bold text-base px-4 py-2 transition duration-300 hover:bg-yellow-500"
+                >
+                    Xem Ngay
+                    <i class="ti-arrow-right my-auto text-sm transition-all duration-300 group-hover:pl-1"></i>
+                </button>
+                <button
+                    class="absolute top-11 right-11 md:w-14 w-10 bg-teal-500 rounded-full aspect-square text-white md:text-2xl text-xl opacity-80 transition duration-300 hover:opacity-100 active:bg-teal-600"
+                    onclick="modal.hide()"
+                >
+                    X
+                </button>
+            </div>
+        </div>
+        <div id="main">
+            <!-- Header -->
+            <section>
+                <div class="h_container">
+                    <div class="header">
+                        <div class="header-top">
+                            <nav class="header-top-nav">
+                                <ul class="header-top-list">
+                                    <li class="header-top-item header-top-item--separate">
+                                        <a href="" class="header-top-item-link">Thông tin</a>
+                                    </li>
+                                    <li class="header-top-item header-top-item--separate">
+                                        <a href="" class="header-top-item-link">Tài khoản</a>
+                                    </li>
+                                    <li class="header-top-item header-top-item--separate">
+                                        <a href="" class="header-top-item-link">Yêu thích</a>
+                                    </li>
+                                    <li class="header-top-item">
+                                        <a href="" class="header-top-item-link">Đơn hàng</a>
+                                    </li>
+                                </ul>
+                                <ul class="header-top-list">
+                                    <li class="header-top-item">
+                                        <marquee direction="left" scrollamount="5"
+                                            >Giảm giá mừng năm mới, tiết kiệm tới 35% ngay hôm nay</marquee
+                                        >
+                                    </li>
+                                </ul>
+                                <ul class="header-top-list">
+                                    <li class="header-top-item header-top-item--separate">
+                                        <span class="header-top-text-label">Need help? Call Us: </span
+                                        ><span class="text-phone-number">+ 1800 900</span>
+                                    </li>
+                                    <li class="header-top-item header-languages header-top-item--separate">
+                                        English
+                                        <div class="header-top-item-language">
+                                            <ul class="header-language-list">
+                                                <li class="language-list-item">
+                                                    <img
+                                                        src="./resources/image/france.png"
+                                                        class="language-list-item-img"
+                                                        alt=""
+                                                    />Pháp
+                                                </li>
+                                                <li class="language-list-item">
+                                                    <img
+                                                        src="./resources/image/germany.png"
+                                                        class="language-list-item-img"
+                                                        alt=""
+                                                    />Đức
+                                                </li>
+                                                <li class="language-list-item">
+                                                    <img
+                                                        src="./resources/image/russia.png"
+                                                        class="language-list-item-img"
+                                                        alt=""
+                                                    />Nga
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <i class="fas fa-angle-down"></i>
+                                    </li>
+                                    <li class="header-top-item header-languages">
+                                        USD
+                                        <div class="header-top-item-language">
+                                            <ul class="header-language-list">
+                                                <li class="language-list-item">
+                                                    <img
+                                                        src="./resources/image/france.png"
+                                                        class="language-list-item-img"
+                                                        alt=""
+                                                    />INR
+                                                </li>
+                                                <li class="language-list-item">
+                                                    <img
+                                                        src="./resources/image/germany.png"
+                                                        class="language-list-item-img"
+                                                        alt=""
+                                                    />MBP
+                                                </li>
+                                                <li class="language-list-item">
+                                                    <img
+                                                        src="./resources/image/russia.png"
+                                                        class="language-list-item-img"
+                                                        alt=""
+                                                    />EU
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <i class="fas fa-angle-down"></i>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="header-bottom">
+                            <div class="header-bottom-logo">
+                                <a href="index.html" class="header-logo-img"
+                                    ><img src="./resources/image/logo.png" alt="logo"
+                                /></a>
+                            </div>
+                            <div class="header-bottom-search">
+                                <input type="text" class="header-input-search" placeholder="Nhập để tìm kiếm" />
+                                <i class="header-icon-search fas fa-search"></i>
+                                <div class="header-search-select">
+                                    <select class="header-search-select-option">
+                                        <option>All Categories</option>
+                                        <option>Milks and Dairies</option>
+                                        <option>Wines & Alcohol</option>
+                                        <option>Clothing & Beauty</option>
+                                        <option>Pet Foods & Toy</option>
+                                        <option>Fast food</option>
+                                        <option>Baking material</option>
+                                        <option>Vegetables</option>
+                                        <option>Fresh Seafood</option>
+                                        <option>Noodles & Rice</option>
+                                        <option>Ice cream</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="header-bottom-action">
+                                <div class="header-box-search">
+                                    <select class="header-box-select-option">
+                                        <option>Your Location</option>
+                                        <option>Alabama</option>
+                                        <option>Alaska</option>
+                                        <option>Arizona</option>
+                                        <option>Delaware</option>
+                                        <option>Florida</option>
+                                        <option>Georgia</option>
+                                        <option>Hawaii</option>
+                                        <option>Indiana</option>
+                                        <option>Maryland</option>
+                                        <option>Nevada</option>
+                                        <option>New Jersey</option>
+                                        <option>New Mexico</option>
+                                        <option>New York</option>
+                                    </select>
+                                </div>
+                                <div class="header-bottom-right">
+                                    <ul class="header-bottom-list">
+                                        <li class="header-bottom-items">
+                                            <a href="" class="header-bottom-items-link">
+                                                <img
+                                                    class="header-bottom-img"
+                                                    src="http://wp.alithemes.com/html/nest/demo/assets/imgs/theme/icons/icon-compare.svg"
+                                                    alt=""
+                                                />
+                                                <span class="header-bottom-number">3</span>
+                                                <span class="header-bottom-name">Đánh giá</span>
+                                            </a>
+                                        </li>
+                                        <li class="header-bottom-items">
+                                            <a href="" class="header-bottom-items-link">
+                                                <img
+                                                    src="http://wp.alithemes.com/html/nest/demo/assets/imgs/theme/icons/icon-heart.svg"
+                                                    alt=""
+                                                />
+                                                <span class="header-bottom-number">6</span>
+                                                <span class="header-bottom-name">Yêu thích</span>
+                                            </a>
+                                        </li>
+                                        <li class="header-bottom-items">
+                                            <a href="" class="header-bottom-items-link">
+                                                <img
+                                                    src="http://wp.alithemes.com/html/nest/demo/assets/imgs/theme/icons/icon-cart.svg"
+                                                    alt=""
+                                                />
+                                                <span class="header-bottom-number">2</span>
+                                                <span class="header-bottom-name">Giỏ hàng</span>
+                                            </a>
+                                            <div class="header-cart-nav">
+                                                <ul class="header-cart-nav-items">
+                                                    <li class="header-cart-item-label">
+                                                        <div class="header-cart-item-img">
+                                                            <a href="" class="cart-img-link">
+                                                                <img src="./resources/image/thumbnail-3.jpg" alt="" />
+                                                            </a>
+                                                        </div>
+                                                        <div class="header-cart-item-title">
+                                                            <h4><a href="">Nước cam</a></h4>
+                                                            <h4 class="cart-title-text">
+                                                                <span>1 &times </span>
+                                                                $800.00
+                                                            </h4>
+                                                        </div>
+                                                        <div class="header-cart-item-del">
+                                                            <a href=""><i class="fas fa-times"></i></a>
+                                                        </div>
+                                                    </li>
+                                                    <li class="header-cart-item-label">
+                                                        <div class="header-cart-item-img">
+                                                            <a href="" class="cart-img-link">
+                                                                <img src="./resources/image/thumbnail-2.jpg" alt="" />
+                                                            </a>
+                                                        </div>
+                                                        <div class="header-cart-item-title">
+                                                            <h4><a href="">Trái cây</a></h4>
+                                                            <h4 class="cart-title-text">
+                                                                <span>1 &times </span>
+                                                                $3200.00
+                                                            </h4>
+                                                        </div>
+                                                        <div class="header-cart-item-del">
+                                                            <a href=""><i class="fas fa-times"></i></a>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                                <div class="header-cart-nav-payment">
+                                                    <div class="header-cart-total">
+                                                        <h4>Total <span>$4000.00</span></h4>
+                                                    </div>
+                                                    <div class="header-cart-btn">
+                                                        <a href="" class="cart-btn-viewcart">Giỏ hàng</a>
+                                                        <a href="" class="cart-btn-checkout">Thanh toán</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="header-bottom-items">
+                                            <a href="" class="header-bottom-items-link">
+                                                <img
+                                                    src="http://wp.alithemes.com/html/nest/demo/assets/imgs/theme/icons/icon-user.svg"
+                                                    alt=""
+                                                />
+                                                <span class="header-bottom-name">Tài khoản</span>
+                                            </a>
+                                            <div class="header-bottom-items-nav">
+                                                <ul class="header-bottom-nav-list">
+                                                    <li class="header-list-label">
+                                                        <a class="header-list-label-link" href=""
+                                                            ><i class="far fa-user h-icon-link"></i>Tài khoản</a
+                                                        >
+                                                    </li>
+                                                    <li class="header-list-label">
+                                                        <a class="header-list-label-link" href=""
+                                                            ><i class="fas fa-map-marker-alt h-icon-link"></i>Đơn
+                                                            hàng</a
+                                                        >
+                                                    </li>
+                                                    <li class="header-list-label">
+                                                        <a class="header-list-label-link" href=""
+                                                            ><i class="fas fa-gifts h-icon-link"></i>Voucher</a
+                                                        >
+                                                    </li>
+                                                    <li class="header-list-label">
+                                                        <a class="header-list-label-link" href=""
+                                                            ><i class="far fa-heart h-icon-link"></i>Yêu thích</a
+                                                        >
+                                                    </li>
+                                                    <li class="header-list-label">
+                                                        <a class="header-list-label-link" href=""
+                                                            ><i class="fas fa-cog h-icon-link"></i>Cài đặt</a
+                                                        >
+                                                    </li>
+                                                    <li class="header-list-label">
+                                                        <a class="header-list-label-link" href=""
+                                                            ><i class="fas fa-sign-out-alt h-icon-link"></i>Đăng xuất</a
+                                                        >
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-responsive-tablet">
+                    <div class="container-rps">
+                        <div class="header-rps">
+                            <div class="header-promotion">
+                                <span>
+                                    Grand opening, <strong>up to 15%</strong> off all items. Only
+                                    <strong>3 days</strong> left
+                                </span>
+                            </div>
+                            <div class="header-rps-wrap">
+                                <div class="header-logo-rps">
+                                    <a href="index.html"><img src="./resources/image/logo.png" alt="logo" /></a>
+                                </div>
+                                <div class="header-rps-right">
+                                    <div class="header-rps-action">
+                                        <div class="header-rps-icons">
+                                            <a href="">
+                                                <img
+                                                    src="http://wp.alithemes.com/html/nest/demo/assets/imgs/theme/icons/icon-heart.svg"
+                                                    alt="icon"
+                                                />
+                                                <span class="h-rps-number">4</span>
+                                            </a>
+                                        </div>
+                                        <div class="header-rps-icons">
+                                            <a href="">
+                                                <img
+                                                    src="http://wp.alithemes.com/html/nest/demo/assets/imgs/theme/icons/icon-cart.svg"
+                                                    alt="icon"
+                                                />
+                                                <span class="h-rps-number">2</span>
+                                            </a>
+                                            <div class="header-rps-dropdown">
+                                                <ul class="header-cart-nav-items">
+                                                    <li class="header-cart-item-label">
+                                                        <div class="header-cart-item-img">
+                                                            <a href="" class="cart-img-link">
+                                                                <img src="./resources/image/thumbnail-3.jpg" alt="" />
+                                                            </a>
+                                                        </div>
+                                                        <div class="header-cart-item-title">
+                                                            <h4><a href="">Nước cam</a></h4>
+                                                            <h4 class="cart-title-text">
+                                                                <span>1 &times </span>
+                                                                $800.00
+                                                            </h4>
+                                                        </div>
+                                                        <div class="header-cart-item-del">
+                                                            <a href=""><i class="fas fa-times"></i></a>
+                                                        </div>
+                                                    </li>
+                                                    <li class="header-cart-item-label">
+                                                        <div class="header-cart-item-img">
+                                                            <a href="" class="cart-img-link">
+                                                                <img src="./resources/image/thumbnail-4.jpg" alt="" />
+                                                            </a>
+                                                        </div>
+                                                        <div class="header-cart-item-title">
+                                                            <h4><a href="">Trái cây</a></h4>
+                                                            <h4 class="cart-title-text">
+                                                                <span>1 &times </span>
+                                                                $3200.00
+                                                            </h4>
+                                                        </div>
+                                                        <div class="header-cart-item-del">
+                                                            <a href=""><i class="fas fa-times"></i></a>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                                <div class="header-cart-nav-payment">
+                                                    <div class="header-cart-total">
+                                                        <h4>Total <span>$4000.00</span></h4>
+                                                    </div>
+                                                    <div class="header-cart-btn">
+                                                        <a href="" class="cart-btn-viewcart">Giỏ hàng</a>
+                                                        <a href="" class="cart-btn-checkout">Thanh toán</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Navbar -->
+            <section class="L_navbar-section">
+                <div class="L_navbar-wrap">
+                    <div class="L_navbar">
+                        <div class="L_navbar-categories">
+                            <div class="L_navbar-categories-list">
+                                <button onclick="Show()">
+                                    <i class="fas fa-th-large L_navbar-categories-icon"></i>
+                                    <span class="L_navbar-categories-info">Browse All Categories</span>
+                                    <i class="fas fa-chevron-down L_navbar-categories-icon-down"></i>
+                                </button>
+                            </div>
+                            <div class="L_navbar-categories-list-submenu" id="showSubCate" style="display: none">
+                                <div class="L-navbar-categories-list-submenu-left">
+                                    <div class="L_navbar-categories-list-submenu-item mt--14">
+                                        <div class="L_navbar-categories-list-submenu-item-img">
+                                            <img
+                                                src="http://wp.alithemes.com/html/nest/demo/assets/imgs/theme/icons/category-1.svg"
+                                                alt=""
+                                            />
+                                        </div>
+                                        <div class="L_navbar-categories-list-submenu-item-info">Milks and Dairies</div>
+                                    </div>
+                                    <div class="L_navbar-categories-list-submenu-item">
+                                        <div class="L_navbar-categories-list-submenu-item-img">
+                                            <img
+                                                src="http://wp.alithemes.com/html/nest/demo/assets/imgs/theme/icons/category-2.svg"
+                                                alt=""
+                                            />
+                                        </div>
+                                        <div class="L_navbar-categories-list-submenu-item-info">Clothing & beauty</div>
+                                    </div>
+                                    <div class="L_navbar-categories-list-submenu-item">
+                                        <div class="L_navbar-categories-list-submenu-item-img">
+                                            <img
+                                                src="http://wp.alithemes.com/html/nest/demo/assets/imgs/theme/icons/category-3.svg"
+                                                alt=""
+                                            />
+                                        </div>
+                                        <div class="L_navbar-categories-list-submenu-item-info">Pet Foods & Toy</div>
+                                    </div>
+                                    <div class="L_navbar-categories-list-submenu-item">
+                                        <div class="L_navbar-categories-list-submenu-item-img">
+                                            <img
+                                                src="http://wp.alithemes.com/html/nest/demo/assets/imgs/theme/icons/category-4.svg"
+                                                alt=""
+                                            />
+                                        </div>
+                                        <div class="L_navbar-categories-list-submenu-item-info">Baking material</div>
+                                    </div>
+                                    <div class="L_navbar-categories-list-submenu-item">
+                                        <div class="L_navbar-categories-list-submenu-item-img">
+                                            <img
+                                                src="http://wp.alithemes.com/html/nest/demo/assets/imgs/theme/icons/category-5.svg"
+                                                alt=""
+                                            />
+                                        </div>
+                                        <div class="L_navbar-categories-list-submenu-item-info">Fresh Fruit</div>
+                                    </div>
+                                    <div class="L_navbar-categories-list-submenu-item">
+                                        <div class="L_navbar-categories-list-submenu-item-img">
+                                            <img
+                                                src="http://wp.alithemes.com/html/nest/demo/assets/imgs/theme/icons/icon-1.svg"
+                                                alt=""
+                                            />
+                                        </div>
+                                        <div class="L_navbar-categories-list-submenu-item-info">Milks and Dairies</div>
+                                    </div>
+                                    <div class="L_navbar-categories-list-submenu-item">
+                                        <div class="L_navbar-categories-list-submenu-item-img">
+                                            <img
+                                                src="http://wp.alithemes.com/html/nest/demo/assets/imgs/theme/icons/icon-2.svg"
+                                                alt=""
+                                            />
+                                        </div>
+                                        <div class="L_navbar-categories-list-submenu-item-info">Clothing & beauty</div>
+                                    </div>
+                                </div>
+                                <div class="L-navbar-categories-list-submenu-right">
+                                    <div class="L_navbar-categories-list-submenu-item mt--14">
+                                        <div class="L_navbar-categories-list-submenu-item-img">
+                                            <img
+                                                src="http://wp.alithemes.com/html/nest/demo/assets/imgs/theme/icons/category-6.svg"
+                                                alt=""
+                                            />
+                                        </div>
+                                        <div class="L_navbar-categories-list-submenu-item-info">Wines & Drinks</div>
+                                    </div>
+                                    <div class="L_navbar-categories-list-submenu-item">
+                                        <div class="L_navbar-categories-list-submenu-item-img">
+                                            <img
+                                                src="http://wp.alithemes.com/html/nest/demo/assets/imgs/theme/icons/category-7.svg"
+                                                alt=""
+                                            />
+                                        </div>
+                                        <div class="L_navbar-categories-list-submenu-item-info">Fresh Seafood</div>
+                                    </div>
+                                    <div class="L_navbar-categories-list-submenu-item">
+                                        <div class="L_navbar-categories-list-submenu-item-img">
+                                            <img
+                                                src="http://wp.alithemes.com/html/nest/demo/assets/imgs/theme/icons/category-8.svg"
+                                                alt=""
+                                            />
+                                        </div>
+                                        <div class="L_navbar-categories-list-submenu-item-info">Fast food</div>
+                                    </div>
+                                    <div class="L_navbar-categories-list-submenu-item">
+                                        <div class="L_navbar-categories-list-submenu-item-img">
+                                            <img
+                                                src="http://wp.alithemes.com/html/nest/demo/assets/imgs/theme/icons/category-9.svg"
+                                                alt=""
+                                            />
+                                        </div>
+                                        <div class="L_navbar-categories-list-submenu-item-info">Vegetables</div>
+                                    </div>
+                                    <div class="L_navbar-categories-list-submenu-item">
+                                        <div class="L_navbar-categories-list-submenu-item-img">
+                                            <img
+                                                src="http://wp.alithemes.com/html/nest/demo/assets/imgs/theme/icons/category-10.svg"
+                                                alt=""
+                                            />
+                                        </div>
+                                        <div class="L_navbar-categories-list-submenu-item-info">Bread and Juice</div>
+                                    </div>
+                                    <div class="L_navbar-categories-list-submenu-item">
+                                        <div class="L_navbar-categories-list-submenu-item-img">
+                                            <img
+                                                src="http://wp.alithemes.com/html/nest/demo/assets/imgs/theme/icons/icon-3.svg"
+                                                alt=""
+                                            />
+                                        </div>
+                                        <div class="L_navbar-categories-list-submenu-item-info">Wines & Drinks</div>
+                                    </div>
+                                    <div class="L_navbar-categories-list-submenu-item">
+                                        <div class="L_navbar-categories-list-submenu-item-img">
+                                            <img
+                                                src="http://wp.alithemes.com/html/nest/demo/assets/imgs/theme/icons/icon-4.svg"
+                                                alt=""
+                                            />
+                                        </div>
+                                        <div class="L_navbar-categories-list-submenu-item-info">Fresh Seafood</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="L_navbar-link">
+                            <div class="L_navbar-link-list">
+                                <div class="L_navbar-link-list-item">
+                                    <i class="fas fa-fire L_navbar-link-list-item-icon color-main font-18"></i>
+                                    <span class="L_navbar-link-list-item-info">Hot Deals</span>
+                                </div>
+                                <div class="L_navbar-link-list-item">
+                                    <span class="L_navbar-link-list-item-info color-main">Home</span>
+                                    <i class="fas fa-chevron-down L_navbar-link-list-item-icon color-main"></i>
+                                    <div class="L_navbar-link-list-item-sub">
+                                        <ul class="L_navbar-link-list-item-sub-menu">
+                                            <li class="L_navbar-link-list-item-sub-menu-title">Home 1</li>
+                                            <li class="L_navbar-link-list-item-sub-menu-title">Home 2</li>
+                                            <li class="L_navbar-link-list-item-sub-menu-title">Home 3</li>
+                                            <li class="L_navbar-link-list-item-sub-menu-title">Home 4</li>
+                                            <li class="L_navbar-link-list-item-sub-menu-title">Home 5</li>
+                                            <li class="L_navbar-link-list-item-sub-menu-title">Home 6</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="L_navbar-link-list-item">
+                                    <span class="L_navbar-link-list-item-info">About</span>
+                                </div>
+                                <div class="L_navbar-link-list-item">
+                                    <span class="L_navbar-link-list-item-info">Shop</span>
+                                    <i class="fas fa-chevron-down L_navbar-link-list-item-icon"></i>
+                                    <div class="L_navbar-link-list-item-sub">
+                                        <ul class="L_navbar-link-list-item-sub-menu">
+                                            <li class="L_navbar-link-list-item-sub-menu-title">
+                                                Shop Grid - Right Sidebar
+                                            </li>
+                                            <li class="L_navbar-link-list-item-sub-menu-title">
+                                                Shop Grid - Left Sidebar
+                                            </li>
+                                            <li class="L_navbar-link-list-item-sub-menu-title">
+                                                Shop List - Right Sidebar
+                                            </li>
+                                            <li class="L_navbar-link-list-item-sub-menu-title">
+                                                Shop List - Left Sidebar
+                                            </li>
+                                            <li class="L_navbar-link-list-item-sub-menu-title">Shop - Wide</li>
+                                            <li class="L_navbar-link-list-item-sub-menu-title">Shop Product</li>
+                                            <li class="L_navbar-link-list-item-sub-menu-title">Shop Filter</li>
+                                            <li class="L_navbar-link-list-item-sub-menu-title">Shop - Wishlist</li>
+                                            <li class="L_navbar-link-list-item-sub-menu-title">Shop - Cart</li>
+                                            <li class="L_navbar-link-list-item-sub-menu-title">Shop - Checkout</li>
+                                            <li class="L_navbar-link-list-item-sub-menu-title">Shop - Compare</li>
+                                            <li class="L_navbar-link-list-item-sub-menu-title">Shop - Invoice</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="L_navbar-link-list-item">
+                                    <span class="L_navbar-link-list-item-info">Vendors</span>
+                                    <i class="fas fa-chevron-down L_navbar-link-list-item-icon"></i>
+                                    <div class="L_navbar-link-list-item-sub">
+                                        <ul class="L_navbar-link-list-item-sub-menu">
+                                            <li class="L_navbar-link-list-item-sub-menu-title">Vendor Grid</li>
+                                            <li class="L_navbar-link-list-item-sub-menu-title">Vendor List</li>
+                                            <li class="L_navbar-link-list-item-sub-menu-title">Vendor Details 01</li>
+                                            <li class="L_navbar-link-list-item-sub-menu-title">Vendor Details 02</li>
+                                            <li class="L_navbar-link-list-item-sub-menu-title">Vendor Dashboard</li>
+                                            <li class="L_navbar-link-list-item-sub-menu-title">Vendor Guide</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div
+                                    class="L_navbar-link-list-item L_navbar-link-mega-menu"
+                                    onmouseenter="megaMenu.show()"
+                                    onmouseleave="megaMenu.hide()"
+                                >
+                                    <span class="L_navbar-link-list-item-info L_navbar-link-mega-menu">Mega Menu</span>
+                                    <i class="fas fa-chevron-down L_navbar-link-list-item-icon"></i>
+                                </div>
+                                <div class="L_navbar-link-list-item">
+                                    <span class="L_navbar-link-list-item-info">Blog</span>
+                                    <i class="fas fa-chevron-down L_navbar-link-list-item-icon"></i>
+                                    <div class="L_navbar-link-list-item-sub">
+                                        <ul class="L_navbar-link-list-item-sub-menu">
+                                            <li class="L_navbar-link-list-item-sub-menu-title">Blog Category Grid</li>
+                                            <li class="L_navbar-link-list-item-sub-menu-title">Blog Category List</li>
+                                            <li class="L_navbar-link-list-item-sub-menu-title">Blog Category Big</li>
+                                            <li class="L_navbar-link-list-item-sub-menu-title">Blog Category Wide</li>
+                                            <li class="L_navbar-link-list-item-sub-menu-title">Blog Post</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="L_navbar-link-list-item">
+                                    <span class="L_navbar-link-list-item-info">Pages</span>
+                                    <i class="fas fa-chevron-down L_navbar-link-list-item-icon"></i>
+                                    <div class="L_navbar-link-list-item-sub">
+                                        <ul class="L_navbar-link-list-item-sub-menu">
+                                            <li class="L_navbar-link-list-item-sub-menu-title">About Us</li>
+                                            <li class="L_navbar-link-list-item-sub-menu-title">Contact</li>
+                                            <li class="L_navbar-link-list-item-sub-menu-title">My Account</li>
+                                            <li class="L_navbar-link-list-item-sub-menu-title">Login</li>
+                                            <li class="L_navbar-link-list-item-sub-menu-title">Register</li>
+                                            <li class="L_navbar-link-list-item-sub-menu-title">Purchase Guide</li>
+                                            <li class="L_navbar-link-list-item-sub-menu-title">Privacy Policy</li>
+                                            <li class="L_navbar-link-list-item-sub-menu-title">Terms of Service</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="L_navbar-link-list-item">
+                                    <span class="L_navbar-link-list-item-info">Contact</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="L_navbar-contact">
+                            <div class="L_navbar-contact-hotline">
+                                <i class="ti-headphone-alt L_navbar-contact-hotline-icon"></i>
+                                <div class="L_navbar-contact-hotline-tel">
+                                    <span class="L_navbar-contact-hotline-tel-num">1900 - 0001</span>
+                                    <span class="L_navbar-contact-hotline-tel-sup">24/7 Support Center</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="L_navbar-mega-menu-continer shadow-2xl rounded-xl">
+                    <div
+                        class="L_navbar-mega-menu"
+                        id="showMegaMenu"
+                        style="display: none"
+                        onmouseenter="megaMenu.show()"
+                        onmouseleave="megaMenu.hide()"
+                    >
+                        <div class="L_navbar-mega-menu-wrap">
+                            <div class="L_navbar-mega-menu-1">
+                                <a class="L_navbar-mega-menu-1-header"> Fruit & Vegetables </a>
+                                <ul class="L_navbar-mega-menu-1-list">
+                                    <li class="L_navbar-mega-menu-1-list-item">Meat & Poultry</li>
+                                    <li class="L_navbar-mega-menu-1-list-item">Fresh Vegetables</li>
+                                    <li class="L_navbar-mega-menu-1-list-item">Herbs & Seasonings</li>
+                                    <li class="L_navbar-mega-menu-1-list-item">Cut & Sprouts</li>
+                                    <li class="L_navbar-mega-menu-1-list-item">Exotic Fruits & Veggies</li>
+                                    <li class="L_navbar-mega-menu-1-list-item">Packaged Produce</li>
+                                </ul>
+                            </div>
+                            <div class="L_navbar-mega-menu-1">
+                                <a class="L_navbar-mega-menu-1-header"> Breakfast & Dairy </a>
+                                <ul class="L_navbar-mega-menu-1-list">
+                                    <li class="L_navbar-mega-menu-1-list-item">Milk & Flavoured Milk</li>
+                                    <li class="L_navbar-mega-menu-1-list-item">Butter and Maragarine</li>
+                                    <li class="L_navbar-mega-menu-1-list-item">Eggs Substitutes</li>
+                                    <li class="L_navbar-mega-menu-1-list-item">Marmalades</li>
+                                    <li class="L_navbar-mega-menu-1-list-item">Sour Cream</li>
+                                    <li class="L_navbar-mega-menu-1-list-item">Cheese</li>
+                                </ul>
+                            </div>
+                            <div class="L_navbar-mega-menu-1">
+                                <a class="L_navbar-mega-menu-1-header"> Meat & Seafood </a>
+                                <ul class="L_navbar-mega-menu-1-list">
+                                    <li class="L_navbar-mega-menu-1-list-item">Breakfast Sausage</li>
+                                    <li class="L_navbar-mega-menu-1-list-item">Dinner Sausage</li>
+                                    <li class="L_navbar-mega-menu-1-list-item">Chicken</li>
+                                    <li class="L_navbar-mega-menu-1-list-item">Sliced Deli Meat</li>
+                                    <li class="L_navbar-mega-menu-1-list-item">Wild Caught Fillets</li>
+                                    <li class="L_navbar-mega-menu-1-list-item">Crab and Shellfish</li>
+                                </ul>
+                            </div>
+                            <div class="L_navbar-mega-menu-ads">
+                                <img
+                                    src="http://wp.alithemes.com/html/nest/demo/assets/imgs/banner/banner-menu.png"
+                                    alt=""
+                                    class="L_navbar-mega-ads-img"
+                                />
+                                <span class="L_navbar-mega-ads-title">HOT DEALS</span>
+                                <span class="L_navbar-mega-ads-title-sub">Đừng bỏ lỡ cơ hội</span>
+                                <span class="L_navbar-mega-ads-discount">
+                                    <span>50% off</span>
+                                </span>
+                                <span class="L_navbar-mega-ads-btn">
+                                    <span>Shop now</span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Slider -->
+            <section>
+                <div class="L_slider-container">
+                    <div class="L_slider-wrap">
+                        <div class="L_slider">
+                            <div class="L_slider-img-wrap">
+                                <img
+                                    src="http://wp.alithemes.com/html/nest/demo/assets/imgs/slider/slider-2.png"
+                                    alt=""
+                                    class="L_slider-img"
+                                />
+                            </div>
+                            <div class="L_slider-title">
+                                <span>Rau củ quả trái cây tươi</span>
+                            </div>
+                            <div class="L_slider-subTitle">
+                                <span>Giảm 50% cho đơn hàng đầu tiên</span>
+                            </div>
+                            <div class="L_slider-getInfo">
+                                <div class="L_slider-getInfo-emailIcon">
+                                    <i class="far fa-paper-plane"></i>
+                                </div>
+                                <div class="L_slider-getInfo-emailAddress">
+                                    <input type="text" placeholder="Nhập email của bạn" />
+                                </div>
+                                <div class="L_slider-getInfo-btnSubcribe">
+                                    <button>Subcribe</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="L_slider">
+                            <div class="L_slider-img-wrap">
+                                <img
+                                    src="http://wp.alithemes.com/html/nest/demo/assets/imgs/slider/slider-1.png"
+                                    alt=""
+                                    class="L_slider-img"
+                                />
+                            </div>
+                            <div class="L_slider-title">
+                                <span>Rau củ quả trái cây tươi</span>
+                            </div>
+                            <div class="L_slider-subTitle">
+                                <span>Giảm 50% cho đơn hàng đầu tiên</span>
+                            </div>
+                            <div class="L_slider-getInfo">
+                                <div class="L_slider-getInfo-emailIcon">
+                                    <i class="far fa-paper-plane"></i>
+                                </div>
+                                <div class="L_slider-getInfo-emailAddress">
+                                    <input type="text" placeholder="Nhập email của bạn" />
+                                </div>
+                                <div class="L_slider-getInfo-btnSubcribe">
+                                    <button>Subcribe</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Feature categories -->
+            <section class="container mx-auto mt-12">
+                <div class="sm:space-y-6 space-y-3 px-3">
+                    <div class="flex space-x-6">
+                        <h1 class="lg:text-3xl text-xl font-bold">Loại phổ biến</h1>
+                        <ul class="space-x-6 lg:text-sm text-xs font-semibold items-end md:flex hidden">
+                            <li class="hover:text-teal-500 hover:-translate-y-0.5 cursor-pointer transition truncate">
+                                Bánh & Sữa
+                            </li>
+                            <li class="hover:text-teal-500 hover:-translate-y-0.5 cursor-pointer transition truncate">
+                                Cà phê & Trà
+                            </li>
+                            <li
+                                class="hover:text-teal-500 hover:-translate-y-0.5 cursor-pointer transition truncate text-teal-500"
+                            >
+                                Thức ăn thú cưng
+                            </li>
+                            <li class="hover:text-teal-500 hover:-translate-y-0.5 cursor-pointer transition truncate">
+                                Đồ chay
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="">
+                        <ul
+                            class="carousel-1 sm:-mx-3 -mx-1"
+                            data-flickity='{ "cellAlign": "left", "wrapAround": true, "pageDots": false }'
+                        ></ul>
+                    </div>
+                    <ul id="b-bigCate" class="grid sm:grid-cols-2 lg:grid-cols-3 grid-cols-1 sm:gap-6 gap-3"></ul>
+                </div>
+            </section>
+            <!-- Popular products -->
+            <section class="container mx-auto mt-12">
+                <div class="sm:space-y-6 space-y-3 px-3">
+                    <div class="flex space-x-6 justify-between">
+                        <h1 class="lg:text-3xl text-xl font-bold">Sản phẩm phổ biến</h1>
+                        <ul class="space-x-6 lg:text-sm text-xs font-semibold items-end md:flex hidden">
+                            <li
+                                class="hover:text-teal-500 hover:-translate-y-0.5 cursor-pointer transition truncate text-teal-500"
+                            >
+                                Tất cả
+                            </li>
+                            <li class="hover:text-teal-500 hover:-translate-y-0.5 cursor-pointer transition truncate">
+                                Sữa & Thực phẩm
+                            </li>
+                            <li class="hover:text-teal-500 hover:-translate-y-0.5 cursor-pointer transition truncate">
+                                Cà phê & Trà
+                            </li>
+                            <li class="hover:text-teal-500 hover:-translate-y-0.5 cursor-pointer transition truncate">
+                                Thức ăn thú cưng
+                            </li>
+                            <li class="hover:text-teal-500 hover:-translate-y-0.5 cursor-pointer transition truncate">
+                                Thịt
+                            </li>
+                            <li class="hover:text-teal-500 hover:-translate-y-0.5 cursor-pointer transition truncate">
+                                Đồ chay
+                            </li>
+                            <li class="hover:text-teal-500 hover:-translate-y-0.5 cursor-pointer transition truncate">
+                                Trái cây
+                            </li>
+                        </ul>
+                    </div>
+                    <ul
+                        id="b-pproduct"
+                        class="grid xl:grid-cols-5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 grid-cols-1 sm:gap-6 gap-3"
+                    ></ul>
+                </div>
+            </section>
+            <!-- Daily -->
+            <section class="container mx-auto mt-12">
+                <div class="sm:space-y-6 space-y-3 px-3">
+                    <div class="flex space-x-6 justify-between">
+                        <h1 class="lg:text-3xl text-xl font-bold">Bán chạy mỗi ngày</h1>
+                        <ul class="space-x-6 lg:text-sm text-xs font-semibold items-end md:flex hidden">
+                            <li
+                                class="hover:text-teal-500 hover:-translate-y-0.5 cursor-pointer transition truncate text-teal-500"
+                            >
+                                Nổi bật
+                            </li>
+                            <li class="hover:text-teal-500 hover:-translate-y-0.5 cursor-pointer transition truncate">
+                                Phổ biến
+                            </li>
+                            <li class="hover:text-teal-500 hover:-translate-y-0.5 cursor-pointer transition truncate">
+                                Vừa thêm
+                            </li>
+                        </ul>
+                    </div>
+                    <div
+                        class="grid xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 sm:gap-6 gap-3 overflow-hidden"
+                    >
+                        <div
+                            class="rounded-xl bg-cover bg-right-bottom p-11 hidden sm:block"
+                            style="
+                                background-image: url('http://wp.alithemes.com/html/nest/demo/assets/imgs/banner/banner-4.png');
+                            "
+                        >
+                            <div class="flex flex-col items-start h-full w-full">
+                                <h1 class="font-bold text-2xl transition duration-300 hover:-translate-y-1">
+                                    Đem thiên nhiên vào nhà
+                                </h1>
+                                <button
+                                    class="mt-auto group flex gap-1 bg-teal-500 rounded-md text-white font-bold text-xs px-3 py-1.5 transition duration-300 hover:bg-yellow-500"
+                                >
+                                    Lướt Ngay
+                                    <i
+                                        class="ti-arrow-right my-auto text-exs transition-all duration-300 group-hover:pl-1"
+                                    >
+                                    </i>
+                                </button>
+                            </div>
+                        </div>
+                        <ul
+                            class="carousel-2 sm:-mx-3 -mx-1 xl:col-span-4 lg:col-span-3 md:col-span-2"
+                            data-flickity='{ "cellAlign": "left", "wrapAround": true, "pageDots": false }'
+                        ></ul>
+                    </div>
+                </div>
+            </section>
+            <!-- Deals of day -->
+            <section class="mt-12">
+                <div class="L_DealOfDay-container">
+                    <div class="L_DealOfDay-wrap">
+                        <div class="L_DealOfDay-head">
+                            <div class="L_DealOfDay-heading">
+                                <span> Deals Of The Day </span>
+                            </div>
+                            <div class="L_DealOfDay-showAll">
+                                <a href="">Show All</a>
+                                <i class="fas fa-chevron-right L_DealOfDay-showAll-icon"></i>
+                            </div>
+                        </div>
+                        <div class="L_DealOfDay-item-wrap">
+                            <div class="L_DealOfDay-item">
+                                <div class="L_DealOfDay-item-img">
+                                    <img
+                                        src="http://wp.alithemes.com/html/nest/demo/assets/imgs/banner/banner-5.png"
+                                        alt=""
+                                    />
+                                    <div class="L_DealOfDay-item-countdown-wrap">
+                                        <div class="L_DealOfDay-item-countdown">
+                                            <div class="L_DealOfDay-item-countdown-info">
+                                                <ul class="L_DealOfDay-item-countdown-time">
+                                                    <li class="container-day">
+                                                        <span class="day1 color-main font-bold text-xl">Time </span>
+                                                        <span class="opacity-80">Days</span>
+                                                    </li>
+                                                    <li class="container-hour">
+                                                        <span class="hour1 color-main font-bold text-xl">Time</span>
+                                                        <span class="opacity-80">Hours</span>
+                                                    </li>
+                                                    <li class="container-minute">
+                                                        <span class="minute1 color-main font-bold text-xl">Time</span>
+                                                        <span class="opacity-80">Mins</span>
+                                                    </li>
+                                                    <li class="container-second">
+                                                        <span class="second1 color-main font-bold text-xl">Time</span>
+                                                        <span class="opacity-80">Sec</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="L_DealOfDay-item-content-wrap">
+                                    <div class="L_DealOfDay-item-content">
+                                        <div class="L_DealOfDay-item-content-header">
+                                            <span>Seeds of Change Organic Quinoa, Brown, & Red Rice</span>
+                                        </div>
+                                        <div class="L_DealOfDay-item-content-rating">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star-half-alt"></i>
+                                            <span>(4.0)</span>
+                                        </div>
+                                        <div class="L_DealOfDay-item-content-cover">
+                                            <span>
+                                                By
+                                                <a href="">NestFood</a>
+                                            </span>
+                                        </div>
+                                        <div class="L_DealOfDay-item-content-card">
+                                            <div class="L_DealOfDay-item-content-card-price">
+                                                <span class="L_DealOfDay-item-content-card-NewPrice">$32.85</span>
+                                                <span class="L_DealOfDay-item-content-card-OldPrice">$33.6</span>
+                                            </div>
+                                            <button class="L_DealOfDay-item-content-card-addBtn">
+                                                <i
+                                                    class="ti-shopping-cart L_DealOfDay-item-content-card-addBtn-icon"
+                                                ></i>
+                                                <span>Add</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="L_DealOfDay-item">
+                                <div class="L_DealOfDay-item-img">
+                                    <img
+                                        src="http://wp.alithemes.com/html/nest/demo/assets/imgs/banner/banner-6.png"
+                                        alt=""
+                                    />
+                                    <div class="L_DealOfDay-item-countdown-wrap">
+                                        <div class="L_DealOfDay-item-countdown">
+                                            <div class="L_DealOfDay-item-countdown-info">
+                                                <ul class="L_DealOfDay-item-countdown-time">
+                                                    <li class="container-day">
+                                                        <span class="day2 color-main font-bold text-xl">Time </span>
+                                                        <span class="opacity-80">Days</span>
+                                                    </li>
+                                                    <li class="container-hour">
+                                                        <span class="hour2 color-main font-bold text-xl">Time</span>
+                                                        <span class="opacity-80">Hours</span>
+                                                    </li>
+                                                    <li class="container-minute">
+                                                        <span class="minute2 color-main font-bold text-xl">Time</span>
+                                                        <span class="opacity-80">Mins</span>
+                                                    </li>
+                                                    <li class="container-second">
+                                                        <span class="second2 color-main font-bold text-xl">Time</span>
+                                                        <span class="opacity-80">Sec</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="L_DealOfDay-item-content-wrap">
+                                    <div class="L_DealOfDay-item-content">
+                                        <div class="L_DealOfDay-item-content-header">
+                                            <span>Seeds of Change Organic Quinoa, Brown, & Red Rice</span>
+                                        </div>
+                                        <div class="L_DealOfDay-item-content-rating">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star-half-alt"></i>
+                                            <span>(4.0)</span>
+                                        </div>
+                                        <div class="L_DealOfDay-item-content-cover">
+                                            <span>
+                                                By
+                                                <a href="">NestFood</a>
+                                            </span>
+                                        </div>
+                                        <div class="L_DealOfDay-item-content-card">
+                                            <div class="L_DealOfDay-item-content-card-price">
+                                                <span class="L_DealOfDay-item-content-card-NewPrice">$32.85</span>
+                                                <span class="L_DealOfDay-item-content-card-OldPrice">$33.6</span>
+                                            </div>
+                                            <button class="L_DealOfDay-item-content-card-addBtn">
+                                                <i
+                                                    class="ti-shopping-cart L_DealOfDay-item-content-card-addBtn-icon"
+                                                ></i>
+                                                <span>Add</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="L_DealOfDay-item">
+                                <div class="L_DealOfDay-item-img">
+                                    <img
+                                        src="http://wp.alithemes.com/html/nest/demo/assets/imgs/banner/banner-7.png"
+                                        alt=""
+                                    />
+                                    <div class="L_DealOfDay-item-countdown-wrap">
+                                        <div class="L_DealOfDay-item-countdown">
+                                            <div class="L_DealOfDay-item-countdown-info">
+                                                <ul class="L_DealOfDay-item-countdown-time">
+                                                    <li class="container-day">
+                                                        <span class="day3 color-main font-bold text-xl">Time </span>
+                                                        <span class="opacity-80">Days</span>
+                                                    </li>
+                                                    <li class="container-hour">
+                                                        <span class="hour3 color-main font-bold text-xl">Time</span>
+                                                        <span class="opacity-80">Hours</span>
+                                                    </li>
+                                                    <li class="container-minute">
+                                                        <span class="minute3 color-main font-bold text-xl">Time</span>
+                                                        <span class="opacity-80">Mins</span>
+                                                    </li>
+                                                    <li class="container-second">
+                                                        <span class="second3 color-main font-bold text-xl">Time</span>
+                                                        <span class="opacity-80">Sec</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="L_DealOfDay-item-content-wrap">
+                                    <div class="L_DealOfDay-item-content">
+                                        <div class="L_DealOfDay-item-content-header">
+                                            <span>Seeds of Change Organic Quinoa, Brown, & Red Rice</span>
+                                        </div>
+                                        <div class="L_DealOfDay-item-content-rating">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star-half-alt"></i>
+                                            <span>(4.0)</span>
+                                        </div>
+                                        <div class="L_DealOfDay-item-content-cover">
+                                            <span>
+                                                By
+                                                <a href="">NestFood</a>
+                                            </span>
+                                        </div>
+                                        <div class="L_DealOfDay-item-content-card">
+                                            <div class="L_DealOfDay-item-content-card-price">
+                                                <span class="L_DealOfDay-item-content-card-NewPrice">$32.85</span>
+                                                <span class="L_DealOfDay-item-content-card-OldPrice">$33.6</span>
+                                            </div>
+                                            <button class="L_DealOfDay-item-content-card-addBtn">
+                                                <i
+                                                    class="ti-shopping-cart L_DealOfDay-item-content-card-addBtn-icon"
+                                                ></i>
+                                                <span>Add</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="L_DealOfDay-item">
+                                <div class="L_DealOfDay-item-img">
+                                    <img
+                                        src="http://wp.alithemes.com/html/nest/demo/assets/imgs/banner/banner-8.png"
+                                        alt=""
+                                    />
+                                    <div class="L_DealOfDay-item-countdown-wrap">
+                                        <div class="L_DealOfDay-item-countdown">
+                                            <div class="L_DealOfDay-item-countdown-info">
+                                                <ul class="L_DealOfDay-item-countdown-time">
+                                                    <li class="container-day">
+                                                        <span class="day4 color-main font-bold text-xl">Time </span>
+                                                        <span class="opacity-80">Days</span>
+                                                    </li>
+                                                    <li class="container-hour">
+                                                        <span class="hour4 color-main font-bold text-xl">Time</span>
+                                                        <span class="opacity-80">Hours</span>
+                                                    </li>
+                                                    <li class="container-minute">
+                                                        <span class="minute4 color-main font-bold text-xl">Time</span>
+                                                        <span class="opacity-80">Mins</span>
+                                                    </li>
+                                                    <li class="container-second">
+                                                        <span class="second4 color-main font-bold text-xl">Time</span>
+                                                        <span class="opacity-80">Sec</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="L_DealOfDay-item-content-wrap">
+                                    <div class="L_DealOfDay-item-content">
+                                        <div class="L_DealOfDay-item-content-header">
+                                            <span>Seeds of Change Organic Quinoa, Brown, & Red Rice</span>
+                                        </div>
+                                        <div class="L_DealOfDay-item-content-rating">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star-half-alt"></i>
+                                            <span>(4.0)</span>
+                                        </div>
+                                        <div class="L_DealOfDay-item-content-cover">
+                                            <span>
+                                                By
+                                                <a href="">NestFood</a>
+                                            </span>
+                                        </div>
+                                        <div class="L_DealOfDay-item-content-card">
+                                            <div class="L_DealOfDay-item-content-card-price">
+                                                <span class="L_DealOfDay-item-content-card-NewPrice">$32.85</span>
+                                                <span class="L_DealOfDay-item-content-card-OldPrice">$33.6</span>
+                                            </div>
+                                            <button class="L_DealOfDay-item-content-card-addBtn">
+                                                <i
+                                                    class="ti-shopping-cart L_DealOfDay-item-content-card-addBtn-icon"
+                                                ></i>
+                                                <span>Add</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Top selling -->
+            <section class="mt-40">
+                <div class="h-container">
+                    <div class="topselling">
+                        <div class="col-topselling">
+                            <h2 class="selling-title">Bán chạy nhất</h2>
+                            <div class="selling-products">
+                                <div class="products-img">
+                                    <a href=""><img src="./resources/image/thumbnail-1.jpg" alt="" /></a>
+                                </div>
+                                <div class="products-name">
+                                    <a href="">
+                                        <h5>
+                                            Nước ép trái cây<br />
+                                            siêu to khổng lồ
+                                        </h5>
+                                    </a>
+                                    <div class="products-rate">
+                                        <div class="product-rate-cover">
+                                            <div class="product-rating"></div>
+                                        </div>
+                                        <span class="rating-number">(4.0)</span>
+                                    </div>
+                                    <div class="products-price">
+                                        <span>$32.85</span>
+                                        <span class="old-price">$33.8</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="selling-products">
+                                <div class="products-img">
+                                    <a href=""><img src="./resources/image/thumbnail-2.jpg" alt="" /></a>
+                                </div>
+                                <div class="products-name">
+                                    <a href="">
+                                        <h5>
+                                            Nước ép trái cây<br />
+                                            siêu to khổng lồ
+                                        </h5>
+                                    </a>
+                                    <div class="products-rate">
+                                        <div class="product-rate-cover">
+                                            <div class="product-rating"></div>
+                                        </div>
+                                        <span class="rating-number">(4.0)</span>
+                                    </div>
+                                    <div class="products-price">
+                                        <span>$32.85</span>
+                                        <span class="old-price">$33.8</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="selling-products">
+                                <div class="products-img">
+                                    <a href=""><img src="./resources/image/thumbnail-3.jpg" alt="" /></a>
+                                </div>
+                                <div class="products-name">
+                                    <a href="">
+                                        <h5>
+                                            Nước ép trái cây<br />
+                                            siêu to khổng lồ
+                                        </h5>
+                                    </a>
+                                    <div class="products-rate">
+                                        <div class="product-rate-cover">
+                                            <div class="product-rating"></div>
+                                        </div>
+                                        <span class="rating-number">(4.0)</span>
+                                    </div>
+                                    <div class="products-price">
+                                        <span>$32.85</span>
+                                        <span class="old-price">$33.8</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-topselling">
+                            <h2 class="selling-title">Sản phẩm thịnh hành</h2>
+                            <div class="selling-products">
+                                <div class="products-img">
+                                    <a href=""><img src="./resources/image/thumbnail-4.jpg" alt="" /></a>
+                                </div>
+                                <div class="products-name">
+                                    <a href="">
+                                        <h5>
+                                            Nước ép trái cây<br />
+                                            siêu to khổng lồ
+                                        </h5>
+                                    </a>
+                                    <div class="products-rate">
+                                        <div class="product-rate-cover">
+                                            <div class="product-rating"></div>
+                                        </div>
+                                        <span class="rating-number">(4.0)</span>
+                                    </div>
+                                    <div class="products-price">
+                                        <span>$32.85</span>
+                                        <span class="old-price">$33.8</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="selling-products">
+                                <div class="products-img">
+                                    <a href=""><img src="./resources/image/thumbnail-5.jpg" alt="" /></a>
+                                </div>
+                                <div class="products-name">
+                                    <a href="">
+                                        <h5>
+                                            Nước ép trái cây<br />
+                                            siêu to khổng lồ
+                                        </h5>
+                                    </a>
+                                    <div class="products-rate">
+                                        <div class="product-rate-cover">
+                                            <div class="product-rating"></div>
+                                        </div>
+                                        <span class="rating-number">(4.0)</span>
+                                    </div>
+                                    <div class="products-price">
+                                        <span>$32.85</span>
+                                        <span class="old-price">$33.8</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="selling-products">
+                                <div class="products-img">
+                                    <a href=""><img src="./resources/image/thumbnail-6.jpg" alt="" /></a>
+                                </div>
+                                <div class="products-name">
+                                    <a href="">
+                                        <h5>
+                                            Nước ép trái cây<br />
+                                            siêu to khổng lồ
+                                        </h5>
+                                    </a>
+                                    <div class="products-rate">
+                                        <div class="product-rate-cover">
+                                            <div class="product-rating"></div>
+                                        </div>
+                                        <span class="rating-number">(4.0)</span>
+                                    </div>
+                                    <div class="products-price">
+                                        <span>$32.85</span>
+                                        <span class="old-price">$33.8</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-topselling col-topselling-mb">
+                            <h2 class="selling-title">Được thêm gần đây</h2>
+                            <div class="selling-products">
+                                <div class="products-img">
+                                    <a href=""><img src="./resources/image/thumbnail-7.jpg" alt="" /></a>
+                                </div>
+                                <div class="products-name">
+                                    <a href="">
+                                        <h5>
+                                            Nước ép trái cây<br />
+                                            siêu to khổng lồ
+                                        </h5>
+                                    </a>
+                                    <div class="products-rate">
+                                        <div class="product-rate-cover">
+                                            <div class="product-rating"></div>
+                                        </div>
+                                        <span class="rating-number">(4.0)</span>
+                                    </div>
+                                    <div class="products-price">
+                                        <span>$32.85</span>
+                                        <span class="old-price">$33.8</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="selling-products">
+                                <div class="products-img">
+                                    <a href=""><img src="./resources/image/thumbnail-8.jpg" alt="" /></a>
+                                </div>
+                                <div class="products-name">
+                                    <a href="">
+                                        <h5>
+                                            Nước ép trái cây<br />
+                                            siêu to khổng lồ
+                                        </h5>
+                                    </a>
+                                    <div class="products-rate">
+                                        <div class="product-rate-cover">
+                                            <div class="product-rating"></div>
+                                        </div>
+                                        <span class="rating-number">(4.0)</span>
+                                    </div>
+                                    <div class="products-price">
+                                        <span>$32.85</span>
+                                        <span class="old-price">$33.8</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="selling-products">
+                                <div class="products-img">
+                                    <a href=""><img src="./resources/image/thumbnail-9.jpg" alt="" /></a>
+                                </div>
+                                <div class="products-name">
+                                    <a href="">
+                                        <h5>
+                                            Nước ép trái cây<br />
+                                            siêu to khổng lồ
+                                        </h5>
+                                    </a>
+                                    <div class="products-rate">
+                                        <div class="product-rate-cover">
+                                            <div class="product-rating"></div>
+                                        </div>
+                                        <span class="rating-number">(4.0)</span>
+                                    </div>
+                                    <div class="products-price">
+                                        <span>$32.85</span>
+                                        <span class="old-price">$33.8</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-topselling col-topselling-mb">
+                            <h2 class="selling-title">Xếp hạng cao nhất</h2>
+                            <div class="selling-products">
+                                <div class="products-img">
+                                    <a href=""><img src="./resources/image/thumbnail-10.jpg" alt="" /></a>
+                                </div>
+                                <div class="products-name">
+                                    <a href="">
+                                        <h5>
+                                            Nước ép trái cây<br />
+                                            siêu to khổng lồ
+                                        </h5>
+                                    </a>
+                                    <div class="products-rate">
+                                        <div class="product-rate-cover">
+                                            <div class="product-rating"></div>
+                                        </div>
+                                        <span class="rating-number">(4.0)</span>
+                                    </div>
+                                    <div class="products-price">
+                                        <span>$32.85</span>
+                                        <span class="old-price">$33.8</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="selling-products">
+                                <div class="products-img">
+                                    <a href=""><img src="./resources/image/thumbnail-11.jpg" alt="" /></a>
+                                </div>
+                                <div class="products-name">
+                                    <a href="">
+                                        <h5>
+                                            Nước ép trái cây<br />
+                                            siêu to khổng lồ
+                                        </h5>
+                                    </a>
+                                    <div class="products-rate">
+                                        <div class="product-rate-cover">
+                                            <div class="product-rating"></div>
+                                        </div>
+                                        <span class="rating-number">(4.0)</span>
+                                    </div>
+                                    <div class="products-price">
+                                        <span>$32.85</span>
+                                        <span class="old-price">$33.8</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="selling-products">
+                                <div class="products-img">
+                                    <a href=""><img src="./resources/image/thumbnail-12.jpg" alt="" /></a>
+                                </div>
+                                <div class="products-name">
+                                    <a href="">
+                                        <h5>
+                                            Nước ép trái cây<br />
+                                            siêu to khổng lồ
+                                        </h5>
+                                    </a>
+                                    <div class="products-rate">
+                                        <div class="product-rate-cover">
+                                            <div class="product-rating"></div>
+                                        </div>
+                                        <span class="rating-number">(4.0)</span>
+                                    </div>
+                                    <div class="products-price">
+                                        <span>$32.85</span>
+                                        <span class="old-price">$33.8</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Newsletter -->
+            <section class="mt-12">
+                <div class="wrapper">
+                    <div class="newsletter">
+                        <div class="text-newsletter">
+                            <h2 class="text-1">
+                                Ở nhà & nhận hàng bạn cần <br />
+                                từ cửa hàng của chúng tôi
+                            </h2>
+                            <p class="text-2">Bắt đầu mua sắm với <span class="texts">Nest Mart</span></p>
+                            <form class="btn-subcribe">
+                                <input class="h-input" type="email" placeholder="Email của bạn" />
+                                <button class="h-btn" type="submit">Đăng ký</button>
+                            </form>
+                        </div>
+                        <div class="h-img">
+                            <img src="./resources/image/banner-9.png" alt="newsletter" />
+                        </div>
+                    </div>
+                    <div class="h-featured">
+                        <div class="featured-list">
+                            <div class="h-label">
+                                <div class="banner-icon">
+                                    <img
+                                        src="http://wp.alithemes.com/html/nest/demo/assets/imgs/theme/icons/icon-1.svg"
+                                    />
+                                </div>
+                                <div class="banner-text">
+                                    <h3 class="banner-title">Giá và ưu đãi tốt nhất</h3>
+                                    <p>Đặt hàng $50 trở lên</p>
+                                </div>
+                            </div>
+                            <div class="h-label">
+                                <div class="banner-icon">
+                                    <img
+                                        src="http://wp.alithemes.com/html/nest/demo/assets/imgs/theme/icons/icon-2.svg"
+                                    />
+                                </div>
+                                <div class="banner-text">
+                                    <h3 class="banner-title">Miễn phí giao hàng</h3>
+                                    <p>Dịch vụ 24/7</p>
+                                </div>
+                            </div>
+                            <div class="h-label">
+                                <div class="banner-icon">
+                                    <img
+                                        src="http://wp.alithemes.com/html/nest/demo/assets/imgs/theme/icons/icon-3.svg"
+                                    />
+                                </div>
+                                <div class="banner-text">
+                                    <h3 class="banner-title">Ưu đãi hàng ngày</h3>
+                                    <p>Khi bạn đăng ký</p>
+                                </div>
+                            </div>
+                            <div class="h-label">
+                                <div class="banner-icon">
+                                    <img
+                                        src="http://wp.alithemes.com/html/nest/demo/assets/imgs/theme/icons/icon-4.svg"
+                                    />
+                                </div>
+                                <div class="banner-text">
+                                    <h3 class="banner-title">Nhiều loại sản phẩm</h3>
+                                    <p>Giảm giá ưu đãi</p>
+                                </div>
+                            </div>
+                            <div class="h-label">
+                                <div class="banner-icon">
+                                    <img
+                                        src="http://wp.alithemes.com/html/nest/demo/assets/imgs/theme/icons/icon-5.svg"
+                                    />
+                                </div>
+                                <div class="banner-text">
+                                    <h3 class="banner-title">Lợi nhuận dễ dàng</h3>
+                                    <p>Trong vòng 30 ngày</p>
+                                </div>
+                            </div>
+                            <div class="h-label h-label-responsive">
+                                <div class="banner-icon">
+                                    <img
+                                        src="http://wp.alithemes.com/html/nest/demo/assets/imgs/theme/icons/icon-6.svg"
+                                    />
+                                </div>
+                                <div class="banner-text">
+                                    <h3 class="banner-title">Giao hàng an toàn</h3>
+                                    <p>Trong vòng 30 ngày</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Footer -->
+            <section class="mt-12">
+                <div class="L_footer-container">
+                    <div class="L_footer-wrap">
+                        <div class="L_footer-info">
+                            <div class="L_footer-info-img">
+                                <img src="http://wp.alithemes.com/html/nest/demo/assets/imgs/theme/logo.svg" alt="" />
+                            </div>
+                            <div class="L_footer-info-title">
+                                <span>Awesome grocery store website template</span>
+                            </div>
+                            <div class="L_footer-info-address">
+                                <div class="L_footer-info-address-icon">
+                                    <img
+                                        src="http://wp.alithemes.com/html/nest/demo/assets/imgs/theme/icons/icon-location.svg"
+                                        alt=""
+                                    />
+                                </div>
+                                <div class="L_footer-info-address-item">
+                                    <span>Address:</span>
+                                    <span>5171 W Campbell Ave undefined Kent, Utah 53127 United States</span>
+                                </div>
+                            </div>
+                            <div class="L_footer-info-tel">
+                                <div class="L_footer-info-tel-icon">
+                                    <img
+                                        src="http://wp.alithemes.com/html/nest/demo/assets/imgs/theme/icons/icon-contact.svg"
+                                        alt=""
+                                    />
+                                </div>
+                                <div class="L_footer-info-tel-item">
+                                    <span>Call Us:</span>
+                                    <span>(+91) - 540-025-124553</span>
+                                </div>
+                            </div>
+                            <div class="L_footer-info-email">
+                                <div class="L_footer-info-email-icon">
+                                    <img
+                                        src="http://wp.alithemes.com/html/nest/demo/assets/imgs/theme/icons/icon-email-2.svg"
+                                        alt=""
+                                    />
+                                </div>
+                                <div class="L_footer-info-email-item">
+                                    <span>Email:</span>
+                                    <span>sale@Nest.com</span>
+                                </div>
+                            </div>
+                            <div class="L_footer-info-hours">
+                                <div class="L_footer-info-hours-icon">
+                                    <img
+                                        src="http://wp.alithemes.com/html/nest/demo/assets/imgs/theme/icons/icon-clock.svg"
+                                        alt=""
+                                    />
+                                </div>
+                                <div class="L_footer-info-hours-item">
+                                    <span>Hours:</span>
+                                    <span>10:00 - 18:00, Mon - Sat</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="L_footer-company">
+                            <div class="L_footer-company-title">Company</div>
+                            <ul class="L_footer-company-info-list">
+                                <li class="L_footer-company-info-item">
+                                    <a href="#">About Us</a>
+                                </li>
+                                <li class="L_footer-company-info-item">
+                                    <a href="#">Delivery Information</a>
+                                </li>
+                                <li class="L_footer-company-info-item">
+                                    <a href="#">Privacy Policy</a>
+                                </li>
+                                <li class="L_footer-company-info-item">
+                                    <a href="#">Terms & Conditions</a>
+                                </li>
+                                <li class="L_footer-company-info-item">
+                                    <a href="#">Contact Us</a>
+                                </li>
+                                <li class="L_footer-company-info-item">
+                                    <a href="#">Support Center</a>
+                                </li>
+                                <li class="L_footer-company-info-item">
+                                    <a href="#">Careers</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="L_footer-link">
+                            <div class="L_footer-link-title">Account</div>
+                            <ul class="L_footer-link-list">
+                                <li class="L_footer-link-list-item">
+                                    <a href="#">Sign In</a>
+                                </li>
+                                <li class="L_footer-link-list-item">
+                                    <a href="#">View Cart</a>
+                                </li>
+                                <li class="L_footer-link-list-item">
+                                    <a href="#">My Wishlist</a>
+                                </li>
+                                <li class="L_footer-link-list-item">
+                                    <a href="#">Track My Order</a>
+                                </li>
+                                <li class="L_footer-link-list-item">
+                                    <a href="#">Help Ticket</a>
+                                </li>
+                                <li class="L_footer-link-list-item">
+                                    <a href="#">Shipping Details</a>
+                                </li>
+                                <li class="L_footer-link-list-item">
+                                    <a href="#">Compare products</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="L_footer-link">
+                            <div class="L_footer-link-title">Corporate</div>
+                            <ul class="L_footer-link-list">
+                                <li class="L_footer-link-list-item">
+                                    <a href="#">Sign In</a>
+                                </li>
+                                <li class="L_footer-link-list-item">
+                                    <a href="#">View Cart</a>
+                                </li>
+                                <li class="L_footer-link-list-item">
+                                    <a href="#">My Wishlist</a>
+                                </li>
+                                <li class="L_footer-link-list-item">
+                                    <a href="#">Track My Order</a>
+                                </li>
+                                <li class="L_footer-link-list-item">
+                                    <a href="#">Help Ticket</a>
+                                </li>
+                                <li class="L_footer-link-list-item">
+                                    <a href="#">Shipping Details</a>
+                                </li>
+                                <li class="L_footer-link-list-item">
+                                    <a href="#">Compare products</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="L_footer-link">
+                            <div class="L_footer-link-title">Popular</div>
+                            <ul class="L_footer-link-list">
+                                <li class="L_footer-link-list-item">
+                                    <a href="#">Sign In</a>
+                                </li>
+                                <li class="L_footer-link-list-item">
+                                    <a href="#">View Cart</a>
+                                </li>
+                                <li class="L_footer-link-list-item">
+                                    <a href="#">My Wishlist</a>
+                                </li>
+                                <li class="L_footer-link-list-item">
+                                    <a href="#">Track My Order</a>
+                                </li>
+                                <li class="L_footer-link-list-item">
+                                    <a href="#">Help Ticket</a>
+                                </li>
+                                <li class="L_footer-link-list-item">
+                                    <a href="#">Shipping Details</a>
+                                </li>
+                                <li class="L_footer-link-list-item">
+                                    <a href="#">Compare products</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="L_footer-install">
+                            <div class="L_footer-install-header">
+                                <span>Install App</span>
+                            </div>
+                            <div class="L_footer-install-title">
+                                <span>From App Store or Google Play</span>
+                            </div>
+                            <div class="L_footer-install-icon">
+                                <a href="">
+                                    <img
+                                        src="http://wp.alithemes.com/html/nest/demo/assets/imgs/theme/app-store.jpg"
+                                        alt=""
+                                    />
+                                </a>
+                                <a href="">
+                                    <img
+                                        src="http://wp.alithemes.com/html/nest/demo/assets/imgs/theme/google-play.jpg"
+                                        alt=""
+                                    />
+                                </a>
+                            </div>
+                            <div class="L_footer-install-payment">
+                                <span>Secured Payment Gateways</span>
+                                <img
+                                    src="http://wp.alithemes.com/html/nest/demo/assets/imgs/theme/payment-method.png"
+                                    alt=""
+                                />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="L_footer-spaceContent"></div>
+                <div class="L_footer-contact-container">
+                    <div class="L_footer-contact">
+                        <div class="L_footer-contact-template">
+                            © 2021,
+                            <span>Nest</span>
+                            - HTML Ecommerce Template All rights reserved
+                        </div>
+                        <div class="L_footer-contact-tel-wrap">
+                            <div class="L_footer-contact-tel">
+                                <img
+                                    src="http://wp.alithemes.com/html/nest/demo/assets/imgs/theme/icons/phone-call.svg"
+                                    alt=""
+                                    class="L_footer-contact-tel-icon"
+                                />
+                                <div class="L_footer-contact-tel-info">
+                                    <p>
+                                        <span class="L_footer-contact-tel-info-num">1900 - 6666</span>
+                                        <span class="L_footer-contact-tel-info-hours">Working 8:00 - 22:00</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="L_footer-contact-tel">
+                                <img
+                                    src="http://wp.alithemes.com/html/nest/demo/assets/imgs/theme/icons/phone-call.svg"
+                                    alt=""
+                                    class="L_footer-contact-tel-icon"
+                                />
+                                <div class="L_footer-contact-tel-info">
+                                    <p>
+                                        <span class="L_footer-contact-tel-info-num">1900 - 8888</span>
+                                        <span class="L_footer-contact-tel-info-hours">24/7 Support Center</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="L_footer-contact-social">
+                            <div class="L_footer-contact-social-main">
+                                <div class="L_footer-contact-social-header">Follow Us:</div>
+                                <div class="L_footer-contact-social-list">
+                                    <a href="" class="L_footer-contact-social-list-item">
+                                        <img
+                                            src="http://wp.alithemes.com/html/nest/demo/assets/imgs/theme/icons/icon-facebook-white.svg"
+                                            alt=""
+                                        />
+                                    </a>
+                                    <a href="" class="L_footer-contact-social-list-item">
+                                        <img
+                                            src="http://wp.alithemes.com/html/nest/demo/assets/imgs/theme/icons/icon-twitter-white.svg"
+                                            alt=""
+                                        />
+                                    </a>
+                                    <a href="" class="L_footer-contact-social-list-item">
+                                        <img
+                                            src="http://wp.alithemes.com/html/nest/demo/assets/imgs/theme/icons/icon-instagram-white.svg"
+                                            alt=""
+                                        />
+                                    </a>
+                                    <a href="" class="L_footer-contact-social-list-item">
+                                        <img
+                                            src="http://wp.alithemes.com/html/nest/demo/assets/imgs/theme/icons/icon-pinterest-white.svg"
+                                            alt=""
+                                        />
+                                    </a>
+                                    <a href="" class="L_footer-contact-social-list-item">
+                                        <img
+                                            src="http://wp.alithemes.com/html/nest/demo/assets/imgs/theme/icons/icon-youtube-white.svg"
+                                            alt=""
+                                        />
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="L_footer-contact-social-title">Up to 15% discount on your first subscribe</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- JS -->
+
+        <script src="https://kit.fontawesome.com/008a52e9c4.js" crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+
+        <script src="./resources/js/BAnimate.js"></script>
+        <script src="./resources/js/products.js"></script>
+        <script src="./resources/js/popularProductLoad.js"></script>
+        <script src="./resources/js/binh.js"></script>
+        <script src="./resources/js/long.js"></script>
+    </body>
+</html>

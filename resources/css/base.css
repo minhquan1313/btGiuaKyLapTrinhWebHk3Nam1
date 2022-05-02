@@ -1,0 +1,38 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+body {
+    margin: 0;
+    line-height: inherit;
+}
+/* SCROLL BAR */
+body:not(.modal-open) {
+    overflow-y: scroll;
+}
+body.modal-open {
+    overflow: hidden;
+}
+body.modal-open #modal {
+    overflow-y: scroll;
+    pointer-events: all;
+    opacity: 1;
+}
+body.modal-open #main,
+body.modal-open #root {
+    overflow-y: scroll;
+}
+#main,
+#root {
+    min-height: 100vh;
+}
+/* SCROLL BAR */
+#modal {
+    position: fixed;
+    inset: 0;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.6s;
+    background: rgba(0, 0, 0, 0.3);
+}
